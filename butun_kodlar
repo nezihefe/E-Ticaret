@@ -1,0 +1,351 @@
+Html Kodları
+
+ 
+<td>{{urun.urunAdi}}</td>
+<td>{{urun.urunfiyati  |currency:'₺'}}</td>
+<td>{{urun.urunKatAdi}}</td>
+<td><button  class="btn  btn-warning  btn-sm" [routerLink]="['/urunduzenlesil',urun.urunId,1]">Düzenle</button>
+</td>
+<td><button  class="btn  btn-danger  btn-sm" [routerLink]="['/urunduzenlesil',urun.urunId,2]">Sil</button></td>
+</tr>
+</tbody>
+</table>
+<h4>Ürün  Ekle</h4>
+<div  class="form-group">
+<label>Ürün  Adı</label>
+<input  type="text"  class="form-control"  #urunadi>
+</div>
+<div  class="form-group">
+<label>Ürün  Fiyatı</label>
+<input  type="text"  class="form-control"  #urunfiyat  SadeceSayi>
+</div>
+<div  class="form-group">
+<label>Ürün  Kategori</label>
+<select  class="form-control"  #urunkatid>
+<option  *ngFor="let  kat  of  kategoriler" value="{{kat.katId}}">{{kat.katAdi}}</option>
+</select>
+</div>
+<div  class="form-group">
+<button  class="btn  btn-success" (click)="UrunKaydet(urunadi.value,urunfiyat.value,urunkatid.value)">Kaydet</butt
+ 
+on>
+ 
+
+</div>
+<div  [ngClass]="urunSonuc.islem  ?  'alert  alert-success':'alert  alert-danger'"
+ 
+*ngIf="urunSonuc.mesaj?.length>0">
+{{urunSonuc.mesaj}}</div>
+</div>
+<div  class="col-md-4">
+<h4>Kategoriler</h4>
+<table  class="table  table-hover">
+<thead>
+<th>Id</th>
+<th>Adı</th>
+<th>Düzenle</th>
+<th>Sil</th>
+</thead>
+<tbody>
+<tr  *ngFor="let  kategori  of  kategoriler">
+<td>{{kategori.katId}}</td>
+<td>{{kategori.katAdi}}</td>
+<td><button  class="btn  btn-warning  btn-sm" [routerLink]="['/katduzenlesil',kategori.katId,1]">Düzenle</button></td>
+<td><button  class="btn  btn-danger  btn-sm" [routerLink]="['/katduzenlesil',kategori.katId,2]">Sil</button>
+</td>
+ 
+ 
+
+Ts Kodları
+
+ 
+ 
+Hakkımda Sayfası
+
+ 
+Html Kodları
+
+<div  class="wpb_wrapper  mt-5  mp-5">
+<div  id="wd-60c976e45e1d4"  class="title-wrapper  wd-wpb  set-mb-s  reset-last-child	wd- title-color-default  wd-title-style-default  wd-width-100  text-left  ">
+
+<div  class="liner-continer">
+<h4  class="woodmart-title-container  title	wd-font-weight-  wd-fontsize- xxxl">ÖRNEK  HAKKIMIZDA  YAZISI  BAŞLIK  ALANI  ``Mağazanız  ile  ilgili  bir  başlık``</h4>
+</div>
+
+<div  class="title-after_title	set-cont-mb-s  reset-last-child	wd- fontsize-s">ALT  BAŞLIK.  Bu  alanda  sloganınızı  kullanabilirsiniz.</div>
+
+</div>
+
+<div  id="wd-60c975c7ef1aa"  class="wd-text-block-wrapper  wd-wpb  color- scheme-custom  wd-width-100  text-left  vc_custom_1623815641592">
+<div  class="woodmart-title-container  woodmart-text-block  reset-last-child font-primary  wd-font-weight-300  ">
+<p></p>
+<p><strong>GİRİŞ</strong>  <em>“Sizden  kısaca  bahseden,  marka  kimliğinizi  yansıtan  çok  uzun olmayacak şekilde bir giriş” Başlığın altında olacak olması, tasarımsal olarakta şık bir görüntü  elde  etmenizi  sağlar.</em></p>
+<p>	</p></div>
+</div>
+<div  class="vc_row  wpb_row  vc_inner  vc_row-fluid"><div  class="wpb_column vc_column_container  vc_col-sm-6"><div  class="vc_column-inner  vc_custom_1494857398526"><div class="wpb_wrapper">
+<div  class="wpb_text_column  wpb_content_element  vc_custom_1623815831648">
+<div  class="wpb_wrapper">
+<p  class="text-larger"><strong>Bu  alanda  hikayenizden  bahsedin.</strong>  Hikaye derken, örnek veriyorum 1994 yılında şurada kurulmuştur olarak değil, gerçek hikayeniz ne ise ondan bahsedin. Mesela şu ihtiyaçlardan dolayı, şu sebeplerden, şu fikirlerle gibi başlayarak kendinizi tanıtın.</p>
+<p  class="text-larger"><strong>İkinic  paragraf.</strong>  Bu  alanda  hizmetlerinizden bahsedebilirsiniz. Kullanıcılarınıza, misafirlerinize veya müşterilerinize sağlamış olduğunuz ayrıcalıklardan bahsetmeniz sizin için ekstra avantaj olacaktır.</p>
+
+</div>
+</div>
+</div></div></div><div  class="wpb_column  vc_column_container  vc_col-sm-6"><div class="vc_column-inner  vc_custom_1494857394949"><div  class="wpb_wrapper">
+<div  class="wpb_text_column  wpb_content_element  vc_custom_1623816220014">
+<div  class="wpb_wrapper">
+<p  class="text-larger"><strong>Üçüncü  paragraf.</strong>  Yaptığınız  iş  ile  katmış olduğunuz değerden ve gelecekteki hedeflerinizden bahsedin. Bu alanda sizin vizyonunuz hakkında  müşterileriniz  bilgi  sahibi  olacaktır.  Eğer  birlikte  bir  değer oluşturabileceklerine  inanıyorlarsa,  sizinle  iletişime  geçeceklerdir.</p>
+<p  class="text-larger"><strong>Son  paragraf.</strong>  Eğer  bu  paragrafa  kadar okutabildiyseniz şanslısınız, çünkü yazıları okumayı çok sevmeyen bir toplumuz. Buraya kadar gelindiyse iletişim için çağrıda bulunun ve dönüş almayı hedefleyin.</p>
+
+</div>
+ 
+</div>
+</div></div></div></div><div  class="vc_separator  wpb_content_element vc_separator_align_center vc_sep_width_100 vc_sep_pos_align_center vc_separator_no_text vc_custom_1499600318751"><span  class="vc_sep_holder  vc_sep_holder_l"><span  style="border- color:rgb(10,10,10);border-color:rgba(10,10,10,0.12);" class="vc_sep_line"></span></span><span  class="vc_sep_holder  vc_sep_holder_r"><span style="border-color:rgb(10,10,10);border-color:rgba(10,10,10,0.12);" class="vc_sep_line"></span></span>
+</div><div  class="vc_row  wpb_row  vc_inner  vc_row-fluid  vc_custom_1499600064550  vc_row-o- content-middle  vc_row-flex"><div  class="wpb_column  vc_column_container  vc_col-sm-6"><div class="vc_column-inner  vc_custom_1499599961071"><div  class="wpb_wrapper">
+
+<div  class="vc_message_box  vc_message_box-standard  vc_message_box-rounded  vc_color- info"><div  class="vc_message_box-icon"><i  class="fas  fa-info-circle"></i></div><p>Bu  alanı copyright  gibi  düşünebilirsiniz.</p>
+</div></div></div></div><div  class="wpb_column  vc_column_container  vc_col-sm-6"><div class="vc_column-inner  vc_custom_1499599970647"><div  class="wpb_wrapper">
+<div  class="wd-social-icons  woodmart-social-icons  text-right  icons-design-bordered icons-size-small  color-scheme-dark  social-share  social-form-circle">
+<a  rel="noopener  noreferrer  nofollow" href="https://www.facebook.com/sharer/sharer.php?u=https://abdullahustun.com/hakkimizda- yazisi/"  target="_blank"  class="  wd-social-icon  social-facebook">
+<span  class="wd-icon"></span>
+</a>
+
+<a  rel="noopener  noreferrer  nofollow" href="https://twitter.com/share?url=https://abdullahustun.com/hakkimizda-yazisi/" target="_blank"  class="  wd-social-icon  social-twitter">
+<span  class="wd-icon"></span>
+</a>
+
+<a  rel="noopener  noreferrer  nofollow" href="https://pinterest.com/pin/create/button/?url=https://abdullahustun.com/hakkimizda- yazisi/&amp;media=https://abdullahustun.com/wp- includes/images/media/default.png&amp;description=Hakk%C4%B1m%C4%B1zda+Yaz%C4%B1s%C4%B1" target="_blank"  class="  wd-social-icon  social-pinterest">
+<span  class="wd-icon"></span>
+</a>
+<a  rel="noopener  noreferrer  nofollow" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://abdullahustun.com/ha kkimizda-yazisi/"  target="_blank"  class="  wd-social-icon  social-linkedin">
+<span  class="wd-icon"></span>
+</a>
+
+<a  rel="noopener  noreferrer  nofollow" href="https://telegram.me/share/url?url=https://abdullahustun.com/hakkimizda-yazisi/" target="_blank"  class="  wd-social-icon  social-tg">
+<span  class="wd-icon"></span>
+</a>
+
+
+</div>
+ 
+ 
+
+İletişim Sayfası
+
+Html Kodları
+
+ 
+</div>
+</div><div  class="form-group">
+<div  class="row">
+<div  class="col-md-6">
+<input  type="email"  name="email"  placeholder="E-Posta  Adresiniz"  required="" class="form-control  input-lg"  id="email"  value="">
+</div>
+<div  class="col-md-6">
+<input  type="tel"  name="tel"  placeholder="Telefon"  required=""  class="form-control input-lg"  id="tel"  value="">
+</div>
+</div>
+</div><div  class="form-group">
+<div  class="row">
+<div  class="col-md-12">
+<textarea  name="mesaj"  class="form-control"  rows="8"  cols="80" placeholder="Mesajınız"></textarea>
+</div>
+</div>
+</div><button  type="submit"  class="btn  btn-gonder2  btn-lg" name="gonder">FORMU GÖNDER</button></form>	</div>
+</div>
+<div  class="col-md-1  text-center  aralik1  hidden-xs">
+<img  class="img-responsive"  src="http://erkankaratas.com.tr/wp- content/themes/drerkan/resimler/aralik1.png" alt="">
+</div>
+<div  class="col-md-5  iletisimbilgi">
+<h2>	İletişim  Bilgilerimiz	</h2>
+<table  class="mtop">
+<br>
+<tbody><tr>
+<td><strong>	Adres:	</strong></td>
+<td>Akdeniz  Üniversitesi,  Pınarbaşı  Mah.  Dumlupınar  Bulvarı  07070  Kampüs Konyaaltı/Antalya/TÜRKİYE
+</td>
+</tr>
+<tr>
+<td><strong>	Telefon:	</strong></td>
+<td>+90 555 555 55 55</td>
+</tr>
+<tr>
+<td><strong>Fax:  </strong></td>
+<td>+90 555 555 55 55</td>
+</tr>
+<tr>
+<td><strong>E-Mail:  </strong></td>
+<td>nezihefee@gmail.com</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+</div>
+</div>
+<div class="container-fluid">
+ 
+ 
+
+Nav Component
+
+Html Kodları
+
+ 
+Ürün Düzenle Sil Componenti
+
+Html Kodları
+
+ 
+ 
+
+Ts Kodları
+
+ 
+ 
+
+Kategori Düzenle Sil Componenti
+
+
+
+
+Html Kodları
+
+ 
+ 
+
+Ts Kodları
+
+ 
+ 
+
+Model Ts Kodları
+Kategori
+
+
+Sonuç
+
+
+Urun
+
+
+Servis Kodları
+Data.service
+
+ 
+providedIn: 'root'
+})
+export class DataService { UyeLogin(k:  string,  p:  string)  {
+throw  new  Error('Method  not  implemented.');
+}
+ParolaUret(arg0:  number):  string  {
+throw  new  Error('Method  not  implemented.');
+}
+
+constructor() { }
+
+/* Kategori Servis Başlangıç */
+KategoriListe() { return  Kategoriler;
+}
+KategoriById(id:  number)  {
+var  filte  =  Kategoriler.filter(s  =>  s.katId  ==  id); return  filte[0];
+}
+KategoriEkle(kat:  Kategori)  {
+var  sonuc:  Sonuc  =  new  Sonuc();
+var  filtre  =  Kategoriler.filter(s  =>  s.katAdi  ==  kat.katAdi); if  (filtre.length  >  0)  {
+sonuc.islem  =  false;
+sonuc.mesaj  =  "Girilen  Kategori  Adı  Kayıtlıdır!";
+}
+else {
+Kategoriler.push(kat); sonuc.islem  =  true;
+sonuc.mesaj  =  "Kategori  Eklendi...";
+}
+return  sonuc;
+}
+KategoriDuzenle(kat: Kategori) {
+var  index  =  Kategoriler.indexOf(kat); Kategoriler[index].katAdi  =  kat.katAdi;
+
+var  sonuc  =  new  Sonuc(); sonuc.islem  =  true;
+sonuc.mesaj  =  "Kategori  Güncellendi"; return  sonuc;
+}
+KategoriSil(kat:  Kategori)  { var  sonuc  =  new  Sonuc();
+var  urunler  =  Urunler.filter(s  =>  s.urunkatId  ==  kat.katId); if  (urunler.length  >  0)  {
+sonuc.islem  =  false;
+sonuc.mesaj  =  "Üzerinde  Ürün  Olan  Kategori  Silinemez!";
+}
+else {
+var  index  =  Kategoriler.indexOf(kat); Kategoriler.splice(index,  1); sonuc.islem  =  true;
+ 
+sonuc.mesaj  =  "Kategori  Silindi";
+}
+
+return  sonuc;
+}
+/* Kategori Servis Bitiş */
+
+/* Ürün Servis Başlangıç */
+
+UrunListele() { return  Urunler;
+}
+UrunById(id: number) {
+var  filtre  =  Urunler.filter(s  =>  s.urunId  ==  id); return  filtre[0];
+}
+UrunListeByKatId(katId:  number)  {
+var  filtre  =  Urunler.filter(s  =>  s.urunkatId  ==  katId); return  filtre;
+}
+UrunEkle(urun:  Urun)  {
+var  sonuc:  Sonuc  =  new  Sonuc();
+var  filtre  =  Urunler.filter(s  =>  s.urunAdi  ==  urun.urunAdi); if  (filtre.length  >  0)  {
+sonuc.islem  =  false;
+sonuc.mesaj  =  "Girilen  Ürün  Adı  Kayıtlıdır!";
+}
+else {
+Urunler.push(urun); sonuc.islem  =  true;
+sonuc.mesaj  =  "Ürün  Eklendi...";
+}
+return  sonuc;
+}
+UrunDuzenle(urun:  Urun)  {
+var  index  =  Urunler.indexOf(urun); Urunler[index].urunAdi  =  urun.urunAdi; Urunler[index].urunfiyati  =  urun.urunfiyati; Urunler[index].urunkatId  =  urun.urunkatId;
+
+var  sonuc:  Sonuc  =  new  Sonuc(); sonuc.islem  =  true;
+sonuc.mesaj  =  "Ürün  Güncellendi..."; return  sonuc;
+}
+urunSil(urun:  Urun)  {
+var  index  =  Urunler.indexOf(urun); Urunler.splice(index,  1);
+
+var  sonuc:  Sonuc  =  new  Sonuc(); sonuc.islem  =  true;
+sonuc.mesaj  =  "Ürün  Silindi..."; return  sonuc;
+}
+ 
+ 
+
+Data
+
+
+App Routing Modülü
+
+
+import  {  HomeComponent  }  from  './components/home/home.component';
+
+import  {  NgModule  }  from  '@angular/core';
+import  {  Routes,  RouterModule  }  from  '@angular/router'; import  {  KatduzenlesilComponent  }  from './components/katduzenlesil/katduzenlesil.component'; import  {  UrunduzenlesilComponent  }  from './components/urunduzenlesil/urunduzenlesil.component';
+import  {  HakkimizdaComponent  }  from  './components/hakkimizda/hakkimizda.component'; import  {  UrunlerComponent  }  from  './components/urunler/urunler.component';
+import  {  IletisimComponent  }  from  './components/iletisim/iletisim.component';
+
+
+const routes: Routes = [
+
+{  path:  '',  component:  HomeComponent  },
+{  path:  'hakkimizda',  component:  HakkimizdaComponent  },
+{  path:  'urunler',  component:  UrunlerComponent  },
+{  path:  'iletisim',  component:  IletisimComponent  },
+{  path:  'katduzenlesil/:id/:islem',  component:  KatduzenlesilComponent  },
+{  path:  'urunduzenlesil/:id/:islem',  component:  UrunduzenlesilComponent  },
+ 
+ 
+
+App Component
+
+
+App Module
+
+ 
